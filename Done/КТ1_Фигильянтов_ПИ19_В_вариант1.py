@@ -9,24 +9,28 @@ try:
         n = int(input("Введите четное число n: "))
     print(f"n = {n}")
 
-    x = float(input("Введите число (градусы) x: "))
+    x = float(input("Введите число x: "))
 
-    
-    from math import sin, cos, radians
+    from math import sin, cos
 
-    x=radians(x)
-
-   # print(f"x = {x}")
+    f = n
+    s = n
     up=0.0
     down=0.0
 
-    while n>1:
-        up=up+(sin(x**(n-1))-cos(x**n))
-        down=down+(x**(1/n))
-        n-=1
+    while f>=1:
+        up=up+(sin(x**(f-1))-cos(x**f))
+        f-=2
+        print(f"up = {up}")
+        
+    while s>=1:
+        down=down+(x**(1/s))
+        s-=1
+        print(f"down = {down}")
 
     S=up/down
-    
+
+   
     print(f"S = {S}", end= " ")
 
     
