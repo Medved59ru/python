@@ -19,7 +19,7 @@ totalQuantityOfWords = sum(listOfWords) # количество слов в пр�
 text = t.replace('.', '')
 text = text.replace(',', '')
 words = text.split()
-t= t.replace('-', '')
+t = t.replace('-', '')
 
 resultDict = {
     "Всего слов": totalQuantityOfWords,
